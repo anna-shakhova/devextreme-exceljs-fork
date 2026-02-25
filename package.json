@@ -29,6 +29,7 @@
     "test": "npm run test:full",
     "test:es5": "export EXCEL_BUILD=es5 && npm run test:full",
     "test:full": "npm run build && npm run test:unit && npm run test:integration && npm run test:end-to-end && npm run test:jasmine",
+    "test:no-jasmine": "npm run build && npm run test:unit && npm run test:integration && npm run test:end-to-end",
     "test:version": "npm run build && npm run test:unit && npm run test:integration && npm run test:end-to-end && npm run test:browser && npm run test:dist",
     "test:all": "npm run test:native && npm run test:es5",
     "test:native": "npm run test:full",
@@ -146,7 +147,7 @@
   },
   "overrides": {
     "asn1.js": "^5.4.1",
-    "glob@>=10.0.0": "^13.0.6",
+    "glob": "^13.0.6",
     "qs": "~6.14.1",
     "grunt-exorcise": {
       "exorcist": "^2.0.0"
@@ -154,6 +155,7 @@
     "grunt-contrib-jasmine": {
       "puppeteer": "^24.12.0"
     },
-    "tar": "^7.5.9"
+    "tar": "^7.5.9",
+    "minimatch": "^10.2.2"
   }
 }
